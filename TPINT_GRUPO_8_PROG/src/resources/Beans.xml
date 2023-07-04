@@ -16,4 +16,12 @@
 	<bean id="beanConfigHibernate" class="Dao.ConfigHibernate"
 		scope="prototype">
 	</bean>
+	<!-- BEAN ENCRIPTAR CONTRASEÑA -->
+	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	<!-- BEAN USUARIO -->
+	<bean id="beanUsuario" class="Entidad.Usuario">
+		<property name="usuario" value="pepe"></property>
+		<property name="contrasenia" value="123"></property>
+		<property name="rol" value="ROLE_USER"></property>
+	</bean>
 </beans>
