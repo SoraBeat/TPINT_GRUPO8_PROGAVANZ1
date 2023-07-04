@@ -9,7 +9,7 @@
 	<security:http auto-config="true" use-expressions="true">
 		<security:csrf disabled="true"/>
 		<security:intercept-url pattern="/login.html" access="permitAll" />
-		<security:intercept-url pattern="/home.html" access="hasRole('usuario')" />
+		<security:intercept-url pattern="/home.html" access="hasRole('ROLE_USER')" />
 		<security:form-login login-page="/login.html" login-processing-url="/verificar-usuario" default-target-url="/home.html"
 			authentication-failure-url="/login.html?error=true" username-parameter="username" password-parameter="password"/>
 		<security:logout logout-url="/logout.html" logout-success-url="/login.html"
