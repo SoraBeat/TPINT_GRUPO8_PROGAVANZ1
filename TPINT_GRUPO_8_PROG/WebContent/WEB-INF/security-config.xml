@@ -6,7 +6,7 @@
         http://www.springframework.org/schema/security
         http://www.springframework.org/schema/security/spring-security-4.2.xsd">
 
-	<security:http auto-config="true" use-expressions="true">
+	<security:http auto-config="true" use-expressions="true" >
 		<security:csrf disabled="true"/>
 		<security:intercept-url pattern="/login.html" access="permitAll" />
 		<security:intercept-url pattern="/home.html" access="hasAnyRole('ROLE_PRESTAMO','ROLE_CLIENTE')" />
@@ -28,5 +28,6 @@
     <bean class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" id="passwordEncoder"/>
     
     <bean id="usuarioDetailsService" class="Dao.UsuarioDetailsService" />
+    
 
 </beans>

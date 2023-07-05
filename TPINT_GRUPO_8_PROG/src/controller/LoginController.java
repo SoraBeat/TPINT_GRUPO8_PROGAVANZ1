@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.security.core.Authentication;
@@ -24,9 +29,10 @@ public class LoginController {
 	ApplicationContext appContext = new ClassPathXmlApplicationContext("resources/Beans.xml");
 
 	@RequestMapping(value="/login.html", method = RequestMethod.GET)
-	public ModelAndView eventoRedireccionarLogin() {
+	public ModelAndView eventoRedireccionarLogin(HttpServletRequest request,HttpServletResponse response) {
 		ModelAndView MV = (ModelAndView) appContext.getBean("beanModelView");
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		
 		if (auth.getPrincipal() != "anonymousUser" ) {
 
         	String authorityValue = auth.getAuthorities().toString();
@@ -42,9 +48,22 @@ public class LoginController {
     		}
     		MV.addObject("Rol",firstAuthorityString);
     		MV.addObject("Usuario",auth.getName());
-        	MV.setViewName("Inicio"); // Nombre de la vista que deseas redireccionar
+        	MV.setViewName("Inicio"); 
         } else {
-        	MV.setViewName("Login"); // Nombre de la vista de login
+        	
+        	Cookie[] cookies = request.getCookies();
+            
+            if (cookies != null) {
+                for (Cookie cookie : cookies) {
+                    if (cookie.getName().equals("JSESSIONID")) {
+                        cookie.setValue("");
+                        cookie.setMaxAge(0);
+                        response.addCookie(cookie);
+                    }
+                }
+            }
+            
+        	MV.setViewName("Login"); 
         }
         return MV;
 	}
