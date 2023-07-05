@@ -5,10 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Clientes</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -26,120 +30,146 @@
 	crossorigin="anonymous"></script>
 <style>
 body {
-    color: #566787;
-    background: #f5f5f5;
-    font-family: 'Roboto', sans-serif;
+	color: #566787;
+	background: #f5f5f5;
+	font-family: 'Roboto', sans-serif;
 }
+
 .table-responsive {
-    margin: 30px 0;
+	margin: 30px 0;
 }
+
 .table-wrapper {
-    min-width: 1000px;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	min-width: 1000px;
+	background: #fff;
+	padding: 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
+
 .table-title {
-    padding-bottom: 10px;
-    margin: 0 0 10px;
-    min-width: 100%;
+	padding-bottom: 10px;
+	margin: 0 0 10px;
+	min-width: 100%;
 }
+
 .table-title h2 {
-    margin: 8px 0 0;
-    font-size: 22px;
+	margin: 8px 0 0;
+	font-size: 22px;
 }
+
 .search-box {
-    position: relative;        
-    float: right;
+	position: relative;
+	float: right;
 }
+
 .search-box input {
-    height: 34px;
-    border-radius: 20px;
-    padding-left: 35px;
-    border-color: #ddd;
-    box-shadow: none;
+	height: 34px;
+	border-radius: 20px;
+	padding-left: 35px;
+	border-color: #ddd;
+	box-shadow: none;
 }
+
 .search-box input:focus {
-    border-color: #3FBAE4;
+	border-color: #3FBAE4;
 }
+
 .search-box i {
-    color: #a0a5b1;
-    position: absolute;
-    font-size: 19px;
-    top: 8px;
-    left: 10px;
+	color: #a0a5b1;
+	position: absolute;
+	font-size: 19px;
+	top: 8px;
+	left: 10px;
 }
+
 table.table tr th, table.table tr td {
-    border-color: #e9e9e9;
+	border-color: #e9e9e9;
 }
+
 table.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #fcfcfc;
+	background-color: #fcfcfc;
 }
+
 table.table-striped.table-hover tbody tr:hover {
-    background: #f5f5f5;
+	background: #f5f5f5;
 }
+
 table.table th i {
-    font-size: 13px;
-    margin: 0 5px;
-    cursor: pointer;
+	font-size: 13px;
+	margin: 0 5px;
+	cursor: pointer;
 }
+
 table.table td:last-child {
-    width: 130px;
+	width: 130px;
 }
+
 table.table td a {
-    color: #a0a5b1;
-    display: inline-block;
-    margin: 0 5px;
+	color: #a0a5b1;
+	display: inline-block;
+	margin: 0 5px;
 }
+
 table.table td a.view {
-    color: #03A9F4;
+	color: #03A9F4;
 }
+
 table.table td a.edit {
-    color: #FFC107;
+	color: #FFC107;
 }
+
 table.table td a.delete {
-    color: #E34724;
+	color: #E34724;
 }
+
 table.table td i {
-    font-size: 19px;
-}    
+	font-size: 19px;
+}
+
 .pagination {
-    float: right;
-    margin: 0 0 5px;
+	float: right;
+	margin: 0 0 5px;
 }
+
 .pagination li a {
-    border: none;
-    font-size: 95%;
-    width: 30px;
-    height: 30px;
-    color: #999;
-    margin: 0 2px;
-    line-height: 30px;
-    border-radius: 30px !important;
-    text-align: center;
-    padding: 0;
+	border: none;
+	font-size: 95%;
+	width: 30px;
+	height: 30px;
+	color: #999;
+	margin: 0 2px;
+	line-height: 30px;
+	border-radius: 30px !important;
+	text-align: center;
+	padding: 0;
 }
+
 .pagination li a:hover {
-    color: #666;
-}	
+	color: #666;
+}
+
 .pagination li.active a {
-    background: #03A9F4;
+	background: #03A9F4;
 }
-.pagination li.active a:hover {        
-    background: #0397d6;
+
+.pagination li.active a:hover {
+	background: #0397d6;
 }
+
 .pagination li.disabled i {
-    color: #ccc;
+	color: #ccc;
 }
+
 .pagination li i {
-    font-size: 16px;
-    padding-top: 6px
+	font-size: 16px;
+	padding-top: 6px
 }
+
 .hint-text {
-    float: left;
-    margin-top: 6px;
-    font-size: 95%;
-}    
+	float: left;
+	margin-top: 6px;
+	font-size: 95%;
+}
 </style>
 <script>
 $(document).ready(function(){
@@ -149,15 +179,15 @@ $(document).ready(function(){
 </head>
 <body style="height: 100vh;">
 
-<!-- Barra navegacion -->
+	<!-- Barra navegacion -->
 	<nav
 		class="navbar navbar-expand-lg navbar-light  bg-dark text-white-50">
 	<div>
-	<form action="home.html" method="get">
-		<input type="submit" value="Banco"
-			class="navbar-brand btn btn-outline-dark text-light font-weight-bold"
-			name="btnIndex">
-	</form>	
+		<form action="home.html" method="get">
+			<input type="submit" value="Banco"
+				class="navbar-brand btn btn-outline-dark text-light font-weight-bold"
+				name="btnIndex">
+		</form>
 	</div>
 	<%
 		if (request.getAttribute("Usuario")!= null) {
@@ -166,7 +196,7 @@ $(document).ready(function(){
 		<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
 			id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
 			aria-expanded="false"> Menu </a>
-		
+
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 			<%
 			String rol = (String) request.getAttribute("Rol");
@@ -176,7 +206,7 @@ $(document).ready(function(){
 				<input type="submit" value="Prestamos" class="dropdown-item"
 					name="btnPrestamos">
 			</form>
-				<%
+			<%
 					}
 					if (rol.equals("ROLE_CLIENTE")) {
 				%>
@@ -188,166 +218,178 @@ $(document).ready(function(){
 		</div>
 	</div>
 	<div class="ml-auto ">
-    <form action="logout.html" method="get">
-        <input type="submit" value="Cerrar Sesion" name="btnSalir" class="btn btn-link text-white">
-    </form>
-    </div>
+		<form action="logout.html" method="get">
+			<input type="submit" value="Cerrar Sesion" name="btnSalir"
+				class="btn btn-link text-white">
+		</form>
+	</div>
 	<%
 		}
 	%> </nav>
-	
-	<div style="width: 90%;margin:0 auto;">
-    <div class="table-responsive">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-8"><h2>Clientes</h2></div>
-                    <div class="col-sm-4">
-                        <div class="search-box">
-                            <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <table class="table table-striped table-hover table-bordered">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Dni<i class="fa fa-sort"></i></th>
-                        <th>Nombre</th>
-                        <th>Apellido<i class="fa fa-sort"></i></th>
-                        <th>Direccion</th>
-                        <th>Codigo postal<i class="fa fa-sort"></i></th>
-                        <th>Provincia</th>
-                        <th>Nacionalidad<i class="fa fa-sort"></i></th>
-                        <th>Fecha de nacimiento</th>
-                        <th>Email<i class="fa fa-sort"></i></th>
-                        <th>Telefono</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>43242344</td>
-                        <td>Marcelo</td>
-                        <td>Perez</td>
-                        <td>Mendoza 123</td>
-                        <td>1644</td>
-                        <td>Buenos Aires</td>
-                        <td>Argentina</td>
-                        <td>03-06-1998</td>
-                        <td>mperez@gmail.com</td>
-                        <td>112321333</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-<td>43242344</td>
-<td>Juan</td>
-<td>Gomez</td>
-<td>Calle 123</td>
-<td>1644</td>
-<td>Buenos Aires</td>
-<td>Argentina</td>
-<td>01-01-1990</td>
-<td>jgomez@gmail.com</td>
-<td>1122334455</td>
 
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                    <td>3</td>
-<td>43242344</td>
-<td>Lucía</td>
-<td>Rodríguez</td>
-<td>Avenida 456</td>
-<td>2000</td>
-<td>Rosario</td>
-<td>Argentina</td>
-<td>05-12-1985</td>
-<td>lrodriguez@gmail.com</td>
-<td>9988776655</td>
-                    
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-<td>4</td>
-<td>43242344</td>
-<td>Carlos</td>
-<td>López</td>
-<td>Plaza 789</td>
-<td>1000</td>
-<td>Córdoba</td>
-<td>Argentina</td>
-<td>10-07-1992</td>
-<td>clopez@gmail.com</td>
-<td>5544332211</td>
+	<div style="width: 90%; margin: 0 auto;">
+		<div class="table-responsive">
+			<div class="table-wrapper">
+				<div class="table-title">
+					<div class="row">
+						<div class="col-sm-8">
+							<h2>Clientes</h2>
+						</div>
+						<div class="col-sm-4">
+							<div class="search-box">
+								<i class="material-icons">&#xE8B6;</i> <input type="text"
+									class="form-control" placeholder="Search&hellip;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<table class="table table-striped table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Dni<i class="fa fa-sort"></i></th>
+							<th>Nombre</th>
+							<th>Apellido<i class="fa fa-sort"></i></th>
+							<th>Direccion</th>
+							<th>Codigo postal<i class="fa fa-sort"></i></th>
+							<th>Provincia</th>
+							<th>Nacionalidad<i class="fa fa-sort"></i></th>
+							<th>Fecha de nacimiento</th>
+							<th>Email<i class="fa fa-sort"></i></th>
+							<th>Telefono</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>43242344</td>
+							<td>Marcelo</td>
+							<td>Perez</td>
+							<td>Mendoza 123</td>
+							<td>1644</td>
+							<td>Buenos Aires</td>
+							<td>Argentina</td>
+							<td>03-06-1998</td>
+							<td>mperez@gmail.com</td>
+							<td>112321333</td>
+							<td><a href="#" class="view" title="View"
+								data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+								<a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+									class="material-icons">&#xE254;</i></a> <a href="#" class="delete"
+								title="Delete" data-toggle="tooltip"><i
+									class="material-icons">&#xE872;</i></a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>43242344</td>
+							<td>Juan</td>
+							<td>Gomez</td>
+							<td>Calle 123</td>
+							<td>1644</td>
+							<td>Buenos Aires</td>
+							<td>Argentina</td>
+							<td>01-01-1990</td>
+							<td>jgomez@gmail.com</td>
+							<td>1122334455</td>
 
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-<td>5</td>
-<td>43242344</td>
-<td>Sofía</td>
-<td>Hernández</td>
-<td>Callejon 321</td>
-<td>5000</td>
-<td>Mendoza</td>
-<td>Argentina</td>
-<td>15-03-1988</td>
-<td>shernandez@gmail.com</td>
-<td>6677889900</td>
+							<td><a href="#" class="view" title="View"
+								data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+								<a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+									class="material-icons">&#xE254;</i></a> <a href="#" class="delete"
+								title="Delete" data-toggle="tooltip"><i
+									class="material-icons">&#xE872;</i></a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>43242344</td>
+							<td>Lucía</td>
+							<td>Rodríguez</td>
+							<td>Avenida 456</td>
+							<td>2000</td>
+							<td>Rosario</td>
+							<td>Argentina</td>
+							<td>05-12-1985</td>
+							<td>lrodriguez@gmail.com</td>
+							<td>9988776655</td>
 
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>        
-                </tbody>
-            </table>
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>  
-</div>   
+							<td><a href="#" class="view" title="View"
+								data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+								<a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+									class="material-icons">&#xE254;</i></a> <a href="#" class="delete"
+								title="Delete" data-toggle="tooltip"><i
+									class="material-icons">&#xE872;</i></a></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>43242344</td>
+							<td>Carlos</td>
+							<td>López</td>
+							<td>Plaza 789</td>
+							<td>1000</td>
+							<td>Córdoba</td>
+							<td>Argentina</td>
+							<td>10-07-1992</td>
+							<td>clopez@gmail.com</td>
+							<td>5544332211</td>
 
-<footer id="align-bottom"
-	class="py-4 bg-dark text-white-50 fixed-bottom">
-<div class="container text-center">
-	<span class="logo-text text-white">© 2023 - By Grupo Nro 8 ProgAvanzada1
-		- todos los derechos reservados </span>
-</div>
-</footer>
+							<td><a href="#" class="view" title="View"
+								data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+								<a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+									class="material-icons">&#xE254;</i></a> <a href="#" class="delete"
+								title="Delete" data-toggle="tooltip"><i
+									class="material-icons">&#xE872;</i></a></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>43242344</td>
+							<td>Sofía</td>
+							<td>Hernández</td>
+							<td>Callejon 321</td>
+							<td>5000</td>
+							<td>Mendoza</td>
+							<td>Argentina</td>
+							<td>15-03-1988</td>
+							<td>shernandez@gmail.com</td>
+							<td>6677889900</td>
 
- 
+							<td><a href="#" class="view" title="View"
+								data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+								<a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+									class="material-icons">&#xE254;</i></a> <a href="#" class="delete"
+								title="Delete" data-toggle="tooltip"><i
+									class="material-icons">&#xE872;</i></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="clearfix">
+					<div class="hint-text">
+						Showing <b>5</b> out of <b>25</b> entries
+					</div>
+					<ul class="pagination">
+						<li class="page-item disabled"><a href="#"><i
+								class="fa fa-angle-double-left"></i></a></li>
+						<li class="page-item"><a href="#" class="page-link">1</a></li>
+						<li class="page-item"><a href="#" class="page-link">2</a></li>
+						<li class="page-item active"><a href="#" class="page-link">3</a></li>
+						<li class="page-item"><a href="#" class="page-link">4</a></li>
+						<li class="page-item"><a href="#" class="page-link">5</a></li>
+						<li class="page-item"><a href="#" class="page-link"><i
+								class="fa fa-angle-double-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="align-bottom"
+		class="py-4 bg-dark text-white-50 fixed-bottom">
+	<div class="container text-center">
+		<span class="logo-text text-white">© 2023 - By Grupo Nro 8
+			ProgAvanzada1 - todos los derechos reservados </span>
+	</div>
+	</footer>
+
+
 
 </body>
 </html>

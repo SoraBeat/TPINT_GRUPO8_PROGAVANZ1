@@ -18,29 +18,28 @@ public class ClienteController {
 
 	ApplicationContext appContext = new ClassPathXmlApplicationContext("resources/Beans.xml");
 
-	@RequestMapping(value="/cliente.html", method = RequestMethod.GET)
+	@RequestMapping(value = "/cliente.html", method = RequestMethod.GET)
 	public ModelAndView eventoRedireccionaCliente() {
 		ModelAndView MV = (ModelAndView) appContext.getBean("beanModelView");
-	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
 		String authorityValue = auth.getAuthorities().toString();
-		
-		Collection<GrantedAuthority> list = (Collection<GrantedAuthority> ) auth.getAuthorities(); 
-		
+
+		Collection<GrantedAuthority> list = (Collection<GrantedAuthority>) auth.getAuthorities();
+
 		Iterator<GrantedAuthority> iterator = list.iterator();
-		    String firstAuthorityString=null ;
-		
+		String firstAuthorityString = null;
+
 		if (iterator.hasNext()) {
-		    GrantedAuthority firstAuthority = iterator.next();
-		    firstAuthorityString = firstAuthority.getAuthority();
+			GrantedAuthority firstAuthority = iterator.next();
+			firstAuthorityString = firstAuthority.getAuthority();
 		}
-		
-		MV.addObject("Rol",firstAuthorityString);
-		
-		MV.addObject("Usuario",auth.getName());
+
+		MV.addObject("Rol", firstAuthorityString);
+
+		MV.addObject("Usuario", auth.getName());
 		MV.setViewName("Cliente");
 		return MV;
 	}
-
 
 }

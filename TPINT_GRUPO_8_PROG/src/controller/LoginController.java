@@ -76,5 +76,12 @@ public class LoginController {
 		MV.setViewName("Inicio");
 		return MV;
 	}
+	
+	@RequestMapping(value="/error.html", method = RequestMethod.GET)
+	public ModelAndView eventoRedireccionarError() {
+		ModelAndView MV = (ModelAndView) appContext.getBean("beanModelView");
+		MV.setViewName("PaginaError");
+		return MV;
+	}
 
 }
