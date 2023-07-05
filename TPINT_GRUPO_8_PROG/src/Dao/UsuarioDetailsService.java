@@ -25,11 +25,9 @@ public class UsuarioDetailsService implements UserDetailsService {
 
 	 @Override
 	    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		 	System.out.println("entro");
 	        ConfigHibernate ch = (ConfigHibernate) appContext.getBean("beanConfigHibernate");
 	        Session session = ch.abrirConexion();
 	        Usuario usuario = (Usuario) session.createQuery("SELECT u FROM Usuario u WHERE u.usuario = :usuario").setParameter("usuario", username).uniqueResult();
-	        System.out.println(usuario);
 	        ch.cerrarSession();
 	        Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
 	        authorities.add(new SimpleGrantedAuthority(usuario.getRol()));
