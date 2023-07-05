@@ -183,11 +183,11 @@ $(document).ready(function(){
 	<nav
 		class="navbar navbar-expand-lg navbar-light  bg-dark text-white-50">
 	<div>
-		<form action="home.html" method="get">
-			<input type="submit" value="Banco"
-				class="navbar-brand btn btn-outline-dark text-light font-weight-bold"
-				name="btnIndex">
-		</form>
+	<form action="home.html" method="get">
+		<input type="submit" value="Banco"
+			class="navbar-brand btn btn-outline-dark text-light font-weight-bold"
+			name="btnIndex">
+	</form>	
 	</div>
 	<%
 		if (request.getAttribute("Usuario")!= null) {
@@ -196,19 +196,19 @@ $(document).ready(function(){
 		<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
 			id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
 			aria-expanded="false"> Menu </a>
-
+		
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 			<%
 			String rol = (String) request.getAttribute("Rol");
-			if (rol.equals("ROLE_PRESTAMO")) {
+			if (rol.equals("ROLE_CLIENTE")) {
 			%>
 			<form action="prestamo.html" method="get">
 				<input type="submit" value="Prestamos" class="dropdown-item"
 					name="btnPrestamos">
 			</form>
-			<%
+				<%
 					}
-					if (rol.equals("ROLE_CLIENTE")) {
+					if (rol.equals("ROLE_PRESTAMO")) {
 				%>
 			<form action="cliente.html" method="get">
 				<input type="submit" value="Clientes" class="dropdown-item"
@@ -218,11 +218,10 @@ $(document).ready(function(){
 		</div>
 	</div>
 	<div class="ml-auto ">
-		<form action="logout.html" method="get">
-			<input type="submit" value="Cerrar Sesion" name="btnSalir"
-				class="btn btn-link text-white">
-		</form>
-	</div>
+    <form action="logout.html" method="post">
+        <input type="submit" value="Cerrar Sesion" name="btnSalir" class="btn btn-link text-white">
+    </form>
+    </div>
 	<%
 		}
 	%> </nav>
