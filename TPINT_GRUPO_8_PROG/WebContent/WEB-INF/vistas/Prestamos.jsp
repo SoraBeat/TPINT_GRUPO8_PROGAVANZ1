@@ -180,7 +180,7 @@ table.table td i {
 <body style="height: 100vh;">
 
 	<!-- Barra navegacion -->
-	<nav
+		<nav
 		class="navbar navbar-expand-lg navbar-light  bg-dark text-white-50">
 	<div>
 	<form action="home.html" method="get">
@@ -200,7 +200,7 @@ table.table td i {
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 			<%
 			String rol = (String) request.getAttribute("Rol");
-			if (rol.equals("ROLE_CLIENTE")) {
+			if (rol.equals("ROLE_PRESTAMO")) {
 			%>
 			<form action="prestamo.html" method="get">
 				<input type="submit" value="Prestamos" class="dropdown-item"
@@ -208,7 +208,7 @@ table.table td i {
 			</form>
 				<%
 					}
-					if (rol.equals("ROLE_PRESTAMO")) {
+					if (rol.equals("ROLE_CLIENTE")) {
 				%>
 			<form action="cliente.html" method="get">
 				<input type="submit" value="Clientes" class="dropdown-item"

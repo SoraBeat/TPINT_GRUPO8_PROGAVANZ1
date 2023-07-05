@@ -35,7 +35,7 @@
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 			<%
 			String rol = (String) request.getAttribute("Rol");
-			if (rol.equals("ROLE_CLIENTE")) {
+			if (rol.equals("ROLE_PRESTAMO")) {
 			%>
 			<form action="prestamo.html" method="get">
 				<input type="submit" value="Prestamos" class="dropdown-item"
@@ -43,7 +43,7 @@
 			</form>
 				<%
 					}
-					if (rol.equals("ROLE_PRESTAMO")) {
+					if (rol.equals("ROLE_CLIENTE")) {
 				%>
 			<form action="cliente.html" method="get">
 				<input type="submit" value="Clientes" class="dropdown-item"
