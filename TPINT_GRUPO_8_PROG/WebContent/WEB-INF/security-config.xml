@@ -17,8 +17,12 @@
 	</security:http>
 
 	<security:authentication-manager>
-        <security:authentication-provider user-service-ref="usuarioDetailsService" />
+        <security:authentication-provider user-service-ref="usuarioDetailsService" >
+        <security:password-encoder ref="passwordEncoder" />
+        </security:authentication-provider>
     </security:authentication-manager>
+    
+    <bean class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" id="passwordEncoder"/>
     
     <bean id="usuarioDetailsService" class="Dao.UsuarioDetailsService" />
 
