@@ -18,8 +18,8 @@
 	<nav
 		class="navbar navbar-expand-lg navbar-light  bg-dark text-white-50">
 	<div>
-	<form action="Redireccionar_IndexGeneral.html" method="post">
-		<input type="submit" value="Mayorista"
+	<form action="home.html" method="get">
+		<input type="submit" value="Banco"
 			class="navbar-brand btn btn-outline-dark text-light font-weight-bold"
 			name="btnIndex">
 	</form>	
@@ -30,14 +30,14 @@
 	<div class="dropdown show">
 		<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
 			id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-			aria-expanded="false"> ABML </a>
+			aria-expanded="false"> Menu </a>
 		
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 			<%
 			String rol = (String) request.getAttribute("Rol");
 			if (rol.equals("ROLE_PRESTAMO")) {
 			%>
-			<form action="prestamo.html" method="post">
+			<form action="prestamo.html" method="get">
 				<input type="submit" value="Prestamos" class="dropdown-item"
 					name="btnPrestamos">
 			</form>
@@ -45,7 +45,7 @@
 					}
 					if (rol.equals("ROLE_CLIENTE")) {
 				%>
-			<form action="cliente.html" method="post">
+			<form action="cliente.html" method="get">
 				<input type="submit" value="Clientes" class="dropdown-item"
 					name="btnClientes">
 			</form>

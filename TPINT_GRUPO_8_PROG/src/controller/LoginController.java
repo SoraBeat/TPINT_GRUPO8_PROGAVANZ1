@@ -27,7 +27,21 @@ public class LoginController {
 	public ModelAndView eventoRedireccionarLogin() {
 		ModelAndView MV = (ModelAndView) appContext.getBean("beanModelView");
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth.getPrincipal() != "anonymousUser" ) {
+		if (auth.getPrincipal() != "anonymousUser" ) {
+
+        	String authorityValue = auth.getAuthorities().toString();
+    		
+    		Collection<GrantedAuthority> list = (Collection<GrantedAuthority> ) auth.getAuthorities(); 
+    		
+    		Iterator<GrantedAuthority> iterator = list.iterator();
+    		    String firstAuthorityString=null ;
+    		
+    		if (iterator.hasNext()) {
+    		    GrantedAuthority firstAuthority = iterator.next();
+    		    firstAuthorityString = firstAuthority.getAuthority();
+    		}
+    		MV.addObject("Rol",firstAuthorityString);
+    		MV.addObject("Usuario",auth.getName());
         	MV.setViewName("Inicio"); // Nombre de la vista que deseas redireccionar
         } else {
         	MV.setViewName("Login"); // Nombre de la vista de login

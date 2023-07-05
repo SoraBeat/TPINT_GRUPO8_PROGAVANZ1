@@ -10,6 +10,8 @@
 		<security:csrf disabled="true"/>
 		<security:intercept-url pattern="/login.html" access="permitAll" />
 		<security:intercept-url pattern="/home.html" access="hasAnyRole('ROLE_PRESTAMO','ROLE_CLIENTE')" />
+		<security:intercept-url pattern="/cliente.html" access="hasRole('ROLE_CLIENTE)" />
+		<security:intercept-url pattern="/prestamo.html" access="hasRole('ROLE_PRESTAMO')" />
 		<security:form-login login-page="/login.html" login-processing-url="/verificar-usuario" default-target-url="/home.html"
 			authentication-failure-url="/login.html?error=true" username-parameter="username" password-parameter="password"/>
 		<security:logout logout-url="/logout.html" logout-success-url="/login.html"
